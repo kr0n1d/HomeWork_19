@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище SkillboxDBModelContainer" CdmEntityContainer="SkConnection">
+    <EntitySetMapping Name="BankAccounts">
+      <EntityTypeMapping TypeName="SkillboxDBModel.BankAccounts">
+        <MappingFragment StoreEntitySet="BankAccounts">
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="dateOpen" ColumnName="dateOpen" />
+          <ScalarProperty Name="balance" ColumnName="balance" />
+          <ScalarProperty Name="capitalization" ColumnName="capitalization" />
+          <ScalarProperty Name="numberTimesIncreased" ColumnName="numberTimesIncreased" />
+          <ScalarProperty Name="clientId" ColumnName="clientId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BankCredits">
+      <EntityTypeMapping TypeName="SkillboxDBModel.BankCredits">
+        <MappingFragment StoreEntitySet="BankCredits">
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="dateOpen" ColumnName="dateOpen" />
+          <ScalarProperty Name="creditTerm" ColumnName="creditTerm" />
+          <ScalarProperty Name="sumCredit" ColumnName="sumCredit" />
+          <ScalarProperty Name="clientId" ColumnName="clientId" />
+          <ScalarProperty Name="numberBankAccount" ColumnName="numberBankAccount" />
+          <ScalarProperty Name="paidOut" ColumnName="paidOut" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="SkillboxDBModel.Clients">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fullName" ColumnName="fullName" />
+          <ScalarProperty Name="typeId" ColumnName="typeId" />
+          <ScalarProperty Name="privileged" ColumnName="privileged" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Types">
+      <EntityTypeMapping TypeName="SkillboxDBModel.Types">
+        <MappingFragment StoreEntitySet="Types">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

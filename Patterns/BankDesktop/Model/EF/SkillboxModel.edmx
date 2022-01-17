@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище SkillboxDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "SkillboxDB.dbo.BankAccounts" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="BankAccounts">
+          <Key>
+            <PropertyRef Name="number" />
+            <PropertyRef Name="dateOpen" />
+            <PropertyRef Name="balance" />
+            <PropertyRef Name="capitalization" />
+            <PropertyRef Name="numberTimesIncreased" />
+            <PropertyRef Name="clientId" />
+          </Key>
+          <Property Name="number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="dateOpen" Type="datetime" Nullable="false" />
+          <Property Name="balance" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="capitalization" Type="bit" Nullable="false" />
+          <Property Name="numberTimesIncreased" Type="int" Nullable="false" />
+          <Property Name="clientId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "SkillboxDB.dbo.BankCredits" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="BankCredits">
+          <Key>
+            <PropertyRef Name="number" />
+            <PropertyRef Name="dateOpen" />
+            <PropertyRef Name="creditTerm" />
+            <PropertyRef Name="sumCredit" />
+            <PropertyRef Name="clientId" />
+            <PropertyRef Name="numberBankAccount" />
+            <PropertyRef Name="paidOut" />
+          </Key>
+          <Property Name="number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="dateOpen" Type="datetime" Nullable="false" />
+          <Property Name="creditTerm" Type="int" Nullable="false" />
+          <Property Name="sumCredit" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="clientId" Type="int" Nullable="false" />
+          <Property Name="numberBankAccount" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="paidOut" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "SkillboxDB.dbo.Clients" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="fullName" />
+            <PropertyRef Name="typeId" />
+            <PropertyRef Name="privileged" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fullName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="typeId" Type="int" Nullable="false" />
+          <Property Name="privileged" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "SkillboxDB.dbo.Types" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Types">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Хранилище SkillboxDBModelContainer">
+          <EntitySet Name="BankAccounts" EntityType="Self.BankAccounts" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [BankAccounts].[number] AS [number], 
+    [BankAccounts].[dateOpen] AS [dateOpen], 
+    [BankAccounts].[balance] AS [balance], 
+    [BankAccounts].[capitalization] AS [capitalization], 
+    [BankAccounts].[numberTimesIncreased] AS [numberTimesIncreased], 
+    [BankAccounts].[clientId] AS [clientId]
+    FROM [dbo].[BankAccounts] AS [BankAccounts]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="BankCredits" EntityType="Self.BankCredits" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [BankCredits].[number] AS [number], 
+    [BankCredits].[dateOpen] AS [dateOpen], 
+    [BankCredits].[creditTerm] AS [creditTerm], 
+    [BankCredits].[sumCredit] AS [sumCredit], 
+    [BankCredits].[clientId] AS [clientId], 
+    [BankCredits].[numberBankAccount] AS [numberBankAccount], 
+    [BankCredits].[paidOut] AS [paidOut]
+    FROM [dbo].[BankCredits] AS [BankCredits]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Clients" EntityType="Self.Clients" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Clients].[id] AS [id], 
+    [Clients].[fullName] AS [fullName], 
+    [Clients].[typeId] AS [typeId], 
+    [Clients].[privileged] AS [privileged]
+    FROM [dbo].[Clients] AS [Clients]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Types" EntityType="Self.Types" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Types].[id] AS [id], 
+    [Types].[name] AS [name]
+    FROM [dbo].[Types] AS [Types]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SkillboxDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BankAccounts">
+          <Key>
+            <PropertyRef Name="number" />
+            <PropertyRef Name="dateOpen" />
+            <PropertyRef Name="balance" />
+            <PropertyRef Name="capitalization" />
+            <PropertyRef Name="numberTimesIncreased" />
+            <PropertyRef Name="clientId" />
+          </Key>
+          <Property Name="number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="dateOpen" Type="DateTime" Nullable="false" />
+          <Property Name="balance" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="capitalization" Type="Boolean" Nullable="false" />
+          <Property Name="numberTimesIncreased" Type="Int32" Nullable="false" />
+          <Property Name="clientId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BankCredits">
+          <Key>
+            <PropertyRef Name="number" />
+            <PropertyRef Name="dateOpen" />
+            <PropertyRef Name="creditTerm" />
+            <PropertyRef Name="sumCredit" />
+            <PropertyRef Name="clientId" />
+            <PropertyRef Name="numberBankAccount" />
+            <PropertyRef Name="paidOut" />
+          </Key>
+          <Property Name="number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="dateOpen" Type="DateTime" Nullable="false" />
+          <Property Name="creditTerm" Type="Int32" Nullable="false" />
+          <Property Name="sumCredit" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="clientId" Type="Int32" Nullable="false" />
+          <Property Name="numberBankAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="paidOut" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="fullName" />
+            <PropertyRef Name="typeId" />
+            <PropertyRef Name="privileged" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="typeId" Type="Int32" Nullable="false" />
+          <Property Name="privileged" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Types">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="SkConnection" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BankAccounts" EntityType="Self.BankAccounts" />
+          <EntitySet Name="BankCredits" EntityType="Self.BankCredits" />
+          <EntitySet Name="Clients" EntityType="Self.Clients" />
+          <EntitySet Name="Types" EntityType="Self.Types" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище SkillboxDBModelContainer" CdmEntityContainer="SkConnection">
+          <EntitySetMapping Name="BankAccounts">
+            <EntityTypeMapping TypeName="SkillboxDBModel.BankAccounts">
+              <MappingFragment StoreEntitySet="BankAccounts">
+                <ScalarProperty Name="number" ColumnName="number" />
+                <ScalarProperty Name="dateOpen" ColumnName="dateOpen" />
+                <ScalarProperty Name="balance" ColumnName="balance" />
+                <ScalarProperty Name="capitalization" ColumnName="capitalization" />
+                <ScalarProperty Name="numberTimesIncreased" ColumnName="numberTimesIncreased" />
+                <ScalarProperty Name="clientId" ColumnName="clientId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BankCredits">
+            <EntityTypeMapping TypeName="SkillboxDBModel.BankCredits">
+              <MappingFragment StoreEntitySet="BankCredits">
+                <ScalarProperty Name="number" ColumnName="number" />
+                <ScalarProperty Name="dateOpen" ColumnName="dateOpen" />
+                <ScalarProperty Name="creditTerm" ColumnName="creditTerm" />
+                <ScalarProperty Name="sumCredit" ColumnName="sumCredit" />
+                <ScalarProperty Name="clientId" ColumnName="clientId" />
+                <ScalarProperty Name="numberBankAccount" ColumnName="numberBankAccount" />
+                <ScalarProperty Name="paidOut" ColumnName="paidOut" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="SkillboxDBModel.Clients">
+              <MappingFragment StoreEntitySet="Clients">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fullName" ColumnName="fullName" />
+                <ScalarProperty Name="typeId" ColumnName="typeId" />
+                <ScalarProperty Name="privileged" ColumnName="privileged" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Types">
+            <EntityTypeMapping TypeName="SkillboxDBModel.Types">
+              <MappingFragment StoreEntitySet="Types">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

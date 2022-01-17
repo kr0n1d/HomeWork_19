@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "7006cf52-3f5e-4756-b0a0-e25b96654f92": {
+      "ProjectGuid": "7006cf52-3f5e-4756-b0a0-e25b96654f92",
+      "DisplayName": "banklibrary",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    },
+    "95d317a1-fbcf-4812-a6df-ace2cd98f009": {
+      "ProjectGuid": "95d317a1-fbcf-4812-a6df-ace2cd98f009",
+      "DisplayName": "BankDesktop",
+      "ColorIndex": 1
+    },
+    "06557713-83e3-492a-b018-82868a83b292": {
+      "ProjectGuid": "06557713-83e3-492a-b018-82868a83b292",
+      "DisplayName": "Example_01",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

@@ -1,0 +1,12 @@
+C:\Users\slava\Desktop\SkillBox\C#_HomeWorks\19. Паттерны\VSCode\Patterns\BankLibrary\bin\Debug\net6.0\BankLibrary.deps.json
+C:\Users\slava\Desktop\SkillBox\C#_HomeWorks\19. Паттерны\VSCode\Patterns\BankLibrary\bin\Debug\net6.0\BankLibrary.dll
+C:\Users\slava\Desktop\SkillBox\C#_HomeWorks\19. Паттерны\VSCode\Patterns\BankLibrary\bin\Debug\net6.0\ref\BankLibrary.dll
+C:\Users\slava\Desktop\SkillBox\C#_HomeWorks\19. Паттерны\VSCode\Patterns\BankLibrary\bin\Debug\net6.0\BankLibrary.pdb
+C:\Users\slava\Desktop\SkillBox\C#_HomeWorks\19. Паттерны\VSCode\Patterns\BankLibrary\obj\Debug\net6.0\BankLibrary.csproj.AssemblyReference.cache
+C:\Users\slava\Desktop\SkillBox\C#_HomeWorks\19. Паттерны\VSCode\Patterns\BankLibrary\obj\Debug\net6.0\BankLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\slava\Desktop\SkillBox\C#_HomeWorks\19. Паттерны\VSCode\Patterns\BankLibrary\obj\Debug\net6.0\BankLibrary.AssemblyInfoInputs.cache
+C:\Users\slava\Desktop\SkillBox\C#_HomeWorks\19. Паттерны\VSCode\Patterns\BankLibrary\obj\Debug\net6.0\BankLibrary.AssemblyInfo.cs
+C:\Users\slava\Desktop\SkillBox\C#_HomeWorks\19. Паттерны\VSCode\Patterns\BankLibrary\obj\Debug\net6.0\BankLibrary.csproj.CoreCompileInputs.cache
+C:\Users\slava\Desktop\SkillBox\C#_HomeWorks\19. Паттерны\VSCode\Patterns\BankLibrary\obj\Debug\net6.0\BankLibrary.dll
+C:\Users\slava\Desktop\SkillBox\C#_HomeWorks\19. Паттерны\VSCode\Patterns\BankLibrary\obj\Debug\net6.0\ref\BankLibrary.dll
+C:\Users\slava\Desktop\SkillBox\C#_HomeWorks\19. Паттерны\VSCode\Patterns\BankLibrary\obj\Debug\net6.0\BankLibrary.pdb

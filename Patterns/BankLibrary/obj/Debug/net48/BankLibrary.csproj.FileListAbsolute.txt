@@ -1,0 +1,4 @@
+C:\Users\slava\Desktop\SkillBox\C#_HomeWorks\19. Паттерны\VSCode\Patterns\BankLibrary\obj\Debug\net48\BankLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\slava\Desktop\SkillBox\C#_HomeWorks\19. Паттерны\VSCode\Patterns\BankLibrary\obj\Debug\net48\BankLibrary.AssemblyInfoInputs.cache
+C:\Users\slava\Desktop\SkillBox\C#_HomeWorks\19. Паттерны\VSCode\Patterns\BankLibrary\obj\Debug\net48\BankLibrary.AssemblyInfo.cs
+C:\Users\slava\Desktop\SkillBox\C#_HomeWorks\19. Паттерны\VSCode\Patterns\BankLibrary\obj\Debug\net48\BankLibrary.csproj.CoreCompileInputs.cache

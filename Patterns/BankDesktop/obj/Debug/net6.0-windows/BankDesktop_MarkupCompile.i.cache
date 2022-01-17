@@ -1,0 +1,20 @@
+﻿BankDesktop
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Users\slava\Desktop\SkillBox\C#_HomeWorks\19. Паттерны\VSCode\Patterns\BankDesktop\obj\Debug\net6.0-windows\
+BankDesktop
+none
+false
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+C:\Users\slava\Desktop\SkillBox\C#_HomeWorks\19. Паттерны\VSCode\Patterns\BankDesktop\App.xaml
+81531085268
+
+301703270163
+199-974751989
+MainWindow.xaml;View\AddBankAccountView.xaml;View\AddBankCreditView.xaml;View\AddClientView.xaml;View\EditClientView.xaml;View\PutBankAccountView.xaml;View\TransferToBankAccountView.xaml;View\TransferToClientView.xaml;
+
+False
+

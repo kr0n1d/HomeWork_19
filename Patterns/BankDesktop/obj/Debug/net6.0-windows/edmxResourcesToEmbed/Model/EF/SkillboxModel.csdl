@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SkillboxDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BankAccounts">
+    <Key>
+      <PropertyRef Name="number" />
+      <PropertyRef Name="dateOpen" />
+      <PropertyRef Name="balance" />
+      <PropertyRef Name="capitalization" />
+      <PropertyRef Name="numberTimesIncreased" />
+      <PropertyRef Name="clientId" />
+    </Key>
+    <Property Name="number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dateOpen" Type="DateTime" Nullable="false" />
+    <Property Name="balance" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="capitalization" Type="Boolean" Nullable="false" />
+    <Property Name="numberTimesIncreased" Type="Int32" Nullable="false" />
+    <Property Name="clientId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BankCredits">
+    <Key>
+      <PropertyRef Name="number" />
+      <PropertyRef Name="dateOpen" />
+      <PropertyRef Name="creditTerm" />
+      <PropertyRef Name="sumCredit" />
+      <PropertyRef Name="clientId" />
+      <PropertyRef Name="numberBankAccount" />
+      <PropertyRef Name="paidOut" />
+    </Key>
+    <Property Name="number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dateOpen" Type="DateTime" Nullable="false" />
+    <Property Name="creditTerm" Type="Int32" Nullable="false" />
+    <Property Name="sumCredit" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="clientId" Type="Int32" Nullable="false" />
+    <Property Name="numberBankAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="paidOut" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="fullName" />
+      <PropertyRef Name="typeId" />
+      <PropertyRef Name="privileged" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="typeId" Type="Int32" Nullable="false" />
+    <Property Name="privileged" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Types">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SkConnection" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BankAccounts" EntityType="Self.BankAccounts" />
+    <EntitySet Name="BankCredits" EntityType="Self.BankCredits" />
+    <EntitySet Name="Clients" EntityType="Self.Clients" />
+    <EntitySet Name="Types" EntityType="Self.Types" />
+  </EntityContainer>
+</Schema>
